@@ -1,0 +1,46 @@
+{
+  "cookiecutter": {
+    "Introduction": "",
+    "type": "lib",
+    "name": "pymdown-superfence-filter-lines",
+    "description": "A custom superfence for pymdown-extensions that can filters lines and plays nice with MkDocs",
+    "title": "Frequenz Filter Lines Superfence",
+    "keywords": "markdown, filter, mkdocs, python3, mkdocs-material, pymdown, pymdown-extensions, superfence",
+    "github_org": "frequenz-floss",
+    "license": "MIT",
+    "author_name": "Frequenz Energy-as-a-Service GmbH",
+    "author_email": "floss@frequenz.com",
+    "python_package": "frequenz.pymdown.superfence.filter_lines",
+    "pypi_package_name": "frequenz-pymdown-superfence-filter-lines",
+    "github_repo_name": "frequenz-pymdown-superfence-filter-lines-python",
+    "default_codeowners": "(like @some-org/some-team; defaults to a team based on the repo type)",
+    "_template": "gh:frequenz-floss/frequenz-repo-config-python",
+    "_repo_dir": "/home/luca/.cookiecutters/frequenz-repo-config-python/cookiecutter",
+    "_checkout": null
+  },
+  "_cookiecutter": {
+    "Introduction": "{{cookiecutter | introduction}}",
+    "type": [
+      "actor",
+      "api",
+      "app",
+      "lib",
+      "model"
+    ],
+    "name": null,
+    "description": null,
+    "title": "{{cookiecutter | proj_title}}",
+    "keywords": "(comma separated: 'frequenz', <type> and <name> are included automatically)",
+    "github_org": "frequenz-floss",
+    "license": [
+      "MIT",
+      "Proprietary"
+    ],
+    "author_name": "Frequenz Energy-as-a-Service GmbH",
+    "author_email": "floss@frequenz.com",
+    "python_package": "{{cookiecutter | python_package}}",
+    "pypi_package_name": "{{cookiecutter | pypi_package_name}}",
+    "github_repo_name": "{{cookiecutter | github_repo_name}}",
+    "default_codeowners": "(like @some-org/some-team; defaults to a team based on the repo type)"
+  }
+}
