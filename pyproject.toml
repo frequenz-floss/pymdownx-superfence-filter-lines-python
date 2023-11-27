@@ -39,6 +39,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 requires-python = ">= 3.11, < 4"
+dependencies = ["Markdown >= 3.5, < 4", "pymdown-extensions >= 10, < 11"]
 dynamic = ["version"]
 
 [[project.authors]]
@@ -56,7 +57,7 @@ dev-flake8 = [
 dev-formatting = ["black == 23.9.1", "isort == 5.12.0"]
 dev-mkdocs = [
   "black == 23.9.1",
-  "Markdown==3.4.4",
+  "Markdown==3.5",
   "mike == 2.0.0",
   "mkdocs-gen-files == 0.5.0",
   "mkdocs-literate-nav == 0.6.1",
@@ -161,7 +162,7 @@ packages = ["frequenz.pymdownx.superfences.filter_lines"]
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["mkdocs_macros.*", "sybil", "sybil.*"]
+module = ["mkdocs_macros.*", "pymdownx.*", "sybil", "sybil.*"]
 ignore_missing_imports = true
 
 [tool.setuptools_scm]
