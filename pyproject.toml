@@ -14,7 +14,21 @@ name = "frequenz-pymdown-superfence-filter-lines"
 description = "A custom superfence for pymdown-extensions that can filters lines and plays nice with MkDocs"
 readme = "README.md"
 license = { text = "MIT" }
-keywords = ["frequenz", "python", "lib", "library", "pymdown-superfence-filter-lines", "markdown", "filter", "mkdocs", "python3", "mkdocs-material", "pymdown", "pymdown-extensions", "superfence"]
+keywords = [
+  "frequenz",
+  "python",
+  "lib",
+  "library",
+  "pymdown-superfence-filter-lines",
+  "markdown",
+  "filter",
+  "mkdocs",
+  "python3",
+  "mkdocs-material",
+  "pymdown",
+  "pymdown-extensions",
+  "superfence",
+]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -57,10 +71,7 @@ dev-mypy = [
   # For checking the noxfile, docs/ script, and tests
   "frequenz-pymdown-superfence-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
 ]
-dev-noxfile = [
-  "nox == 2023.4.22",
-  "frequenz-repo-config[lib] == 0.7.0",
-]
+dev-noxfile = ["nox == 2023.4.22", "frequenz-repo-config[lib] == 0.7.0"]
 dev-pylint = [
   "pylint == 3.0.2",
   # For checking the noxfile, docs/ script, and tests
