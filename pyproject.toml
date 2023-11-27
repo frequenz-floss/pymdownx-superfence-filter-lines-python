@@ -15,7 +15,6 @@ description = "A custom superfence for pymdown-extensions that can filters lines
 readme = "README.md"
 license = { text = "MIT" }
 keywords = ["frequenz", "python", "lib", "library", "pymdown-superfence-filter-lines", "markdown", "filter", "mkdocs", "python3", "mkdocs-material", "pymdown", "pymdown-extensions", "superfence"]
-# TODO(cookiecutter): Remove and add more classifiers if appropriate
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -36,7 +35,6 @@ dynamic = ["version"]
 name = "Frequenz Energy-as-a-Service GmbH"
 email = "floss@frequenz.com"
 
-# TODO(cookiecutter): Remove and add more optional dependencies if appropriate
 [project.optional-dependencies]
 dev-flake8 = [
   "flake8 == 6.1.0",
