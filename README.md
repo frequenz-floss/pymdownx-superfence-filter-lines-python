@@ -47,14 +47,21 @@ This is line 17
 
 This will show the following block of code in the rendered output:
 
-```text
+```text show_lines=":2,4,7,10:12,15:"
 This is line 1
 This is line 2
+This is line 3
 This is line 4
+This is line 5
+This is line 6
 This is line 7
+This is line 8
+This is line 9
 This is line 10
 This is line 11
 This is line 12
+This is line 13
+This is line 14
 This is line 15
 This is line 16
 This is line 17
