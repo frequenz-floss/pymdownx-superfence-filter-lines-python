@@ -2,16 +2,15 @@
   {
     "version": "v1.0-dev",
     "title": "v1.0-dev (33a3683)",
-    "aliases": [
-      "latest"
-    ]
+    "aliases": []
   },
   {
     "version": "v0.1-dev",
-    "title": "v0.1-dev (33a3683)",
+    "title": "v0.1-dev (6a14c35)",
     "aliases": [
-      "latest-dev",
-      "v0-dev"
+      "latest",
+      "v0-dev",
+      "latest-dev"
     ]
   }
 ]
