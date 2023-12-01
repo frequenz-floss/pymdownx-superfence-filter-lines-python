@@ -9,10 +9,10 @@
 # For example:
 #
 # "part:module":
-#   - "src/frequenz/lib/pymdown_superfence_filter_lines/module/**"
+#   - "src/frequenz/pymdownx/superfences/filter_lines/module/**"
 #
 # "part:other":
-#   - "src/frequenz/lib/pymdown_superfence_filter_lines/other/**"
+#   - "src/frequenz/pymdownx/superfences/filter_lines/other/**"
 #
 # # For excluding some files (in this example, label "part:complicated"
 # # everything inside src/ with a .py suffix, except for src/__init__.py)
