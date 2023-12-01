@@ -3,8 +3,9 @@
     "version": "v1.0-dev",
     "title": "v1.0-dev (6a14c35)",
     "aliases": [
-      "latest-dev",
-      "v0-dev"
+      "v0-dev",
+      "latest",
+      "latest-dev"
     ]
   }
 ]
