@@ -10,7 +10,7 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "frequenz-pymdown-superfence-filter-lines"
+name = "frequenz-pymdownx-superfences-filter-lines"
 description = "A custom superfence for pymdown-extensions that can filters lines and plays nice with MkDocs"
 readme = "README.md"
 license = { text = "MIT" }
@@ -19,13 +19,13 @@ keywords = [
   "python",
   "lib",
   "library",
-  "pymdown-superfence-filter-lines",
+  "pymdownx-superfences-filter-lines",
   "markdown",
   "filter",
   "mkdocs",
   "python3",
   "mkdocs-material",
-  "pymdown",
+  "pymdownx",
   "pymdown-extensions",
   "superfence",
 ]
@@ -39,6 +39,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 requires-python = ">= 3.11, < 4"
+dependencies = ["Markdown >= 3.5, < 4", "pymdown-extensions >= 10, < 11"]
 dynamic = ["version"]
 
 [[project.authors]]
@@ -56,7 +57,7 @@ dev-flake8 = [
 dev-formatting = ["black == 23.9.1", "isort == 5.12.0"]
 dev-mkdocs = [
   "black == 23.9.1",
-  "Markdown==3.4.4",
+  "Markdown==3.5",
   "mike == 2.0.0",
   "mkdocs-gen-files == 0.5.0",
   "mkdocs-literate-nav == 0.6.1",
@@ -69,13 +70,13 @@ dev-mypy = [
   "mypy == 1.5.1",
   "types-Markdown == 3.4.2.10",
   # For checking the noxfile, docs/ script, and tests
-  "frequenz-pymdown-superfence-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
+  "frequenz-pymdownx-superfences-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
 ]
 dev-noxfile = ["nox == 2023.4.22", "frequenz-repo-config[lib] == 0.7.5"]
 dev-pylint = [
   "pylint == 3.0.2",
   # For checking the noxfile, docs/ script, and tests
-  "frequenz-pymdown-superfence-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
+  "frequenz-pymdownx-superfences-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
 ]
 dev-pytest = [
   "pytest == 7.4.2",
@@ -85,15 +86,15 @@ dev-pytest = [
   "async-solipsism == 0.5",
 ]
 dev = [
-  "frequenz-pymdown-superfence-filter-lines[dev-mkdocs,dev-flake8,dev-formatting,dev-mkdocs,dev-mypy,dev-noxfile,dev-pylint,dev-pytest]",
+  "frequenz-pymdownx-superfences-filter-lines[dev-mkdocs,dev-flake8,dev-formatting,dev-mkdocs,dev-mypy,dev-noxfile,dev-pylint,dev-pytest]",
 ]
 
 [project.urls]
-Documentation = "https://frequenz-floss.github.io/frequenz-pymdown-superfence-filter-lines-python/"
-Changelog = "https://github.com/frequenz-floss/frequenz-pymdown-superfence-filter-lines-python/releases"
-Issues = "https://github.com/frequenz-floss/frequenz-pymdown-superfence-filter-lines-python/issues"
-Repository = "https://github.com/frequenz-floss/frequenz-pymdown-superfence-filter-lines-python"
-Support = "https://github.com/frequenz-floss/frequenz-pymdown-superfence-filter-lines-python/discussions/categories/support"
+Documentation = "https://frequenz-floss.github.io/frequenz-pymdownx-superfences-filter-lines-python/"
+Changelog = "https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python/releases"
+Issues = "https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python/issues"
+Repository = "https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python"
+Support = "https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python/discussions/categories/support"
 
 [tool.black]
 line-length = 88
@@ -157,11 +158,11 @@ namespace_packages = true
 # used but getting the original ignored error when removing the type: ignore.
 # See for example: https://github.com/python/mypy/issues/2960
 #no_incremental = true
-packages = ["frequenz.pymdown.superfence.filter_lines"]
+packages = ["frequenz.pymdownx.superfences.filter_lines"]
 strict = true
 
 [[tool.mypy.overrides]]
-module = ["mkdocs_macros.*", "sybil", "sybil.*"]
+module = ["mkdocs_macros.*", "pymdownx.*", "sybil", "sybil.*"]
 ignore_missing_imports = true
 
 [tool.setuptools_scm]
