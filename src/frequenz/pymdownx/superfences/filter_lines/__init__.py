@@ -9,7 +9,7 @@ import logging
 from typing import Any, NotRequired, Self, Set, TypedDict, cast
 
 import markdown
-from pymdownx.superfences import highlight_validator
+from pymdownx.superfences import SuperFencesBlockPreprocessor, highlight_validator
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
@@ -222,7 +222,9 @@ def do_format(
         src = "".join(lines)
 
     # Run through default highlighter
-    return md.preprocessors["fenced_code_block"].highlight(
+    fenced_code_block = md.preprocessors["fenced_code_block"]
+    assert isinstance(fenced_code_block, SuperFencesBlockPreprocessor)
+    return fenced_code_block.highlight(
         src=src,
         class_name=class_name,
         language=language,
