@@ -8,6 +8,7 @@ from typing import Iterator
 from unittest import mock
 
 import pytest
+from pymdownx.superfences import SuperFencesBlockPreprocessor
 
 from frequenz.pymdownx.superfences.filter_lines import (
     LinesRange,
@@ -21,9 +22,10 @@ from frequenz.pymdownx.superfences.filter_lines import (
 def md_mock() -> Iterator[mock.MagicMock]:
     """Mock the `md` object."""
     md = mock.MagicMock()
-    preprocessor = mock.MagicMock()
-    preprocessor.highlight.side_effect = True
-    md.preprocessors.return_value = {"fenced_code_block": preprocessor}
+    preprocessor = mock.MagicMock(spec=SuperFencesBlockPreprocessor)
+    preprocessor.highlight.return_value = True
+    preprocessors = {"fenced_code_block": preprocessor}
+    md.preprocessors.__getitem__.side_effect = preprocessors.__getitem__
     yield md
 
 
