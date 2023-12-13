@@ -31,7 +31,7 @@ def md_mock() -> Iterator[mock.MagicMock]:
 
 _SOURCE = """\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 4. we number them
 5. so we can see which ones are filtered
@@ -100,7 +100,7 @@ _cases = [
         options=Options(show_lines=LinesRanges({LinesRange(end=3)})),
         expected_src="""\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 """,
     ),
@@ -109,7 +109,7 @@ _cases = [
         title="Open range with start and end in the middle",
         options=Options(show_lines=LinesRanges({LinesRange(start=2, end=4)})),
         expected_src="""\
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 4. we number them
 """,
@@ -144,7 +144,7 @@ _cases = [
         ),
         expected_src="""\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 4. we number them
 5. so we can see which ones are filtered
 6. and which ones are not
