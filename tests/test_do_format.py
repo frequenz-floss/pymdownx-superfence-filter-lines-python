@@ -10,12 +10,7 @@ from unittest import mock
 import pytest
 from pymdownx.superfences import SuperFencesBlockPreprocessor
 
-from frequenz.pymdownx.superfences.filter_lines import (
-    LinesRange,
-    LinesRanges,
-    Options,
-    do_format,
-)
+from pymdownx_superfence_filter_lines import LinesRange, LinesRanges, Options, do_format
 
 
 @pytest.fixture

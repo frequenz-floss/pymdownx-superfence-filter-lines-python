@@ -1,8 +1,8 @@
 # Frequenz Filter Lines Superfence
 
-[![Build Status](https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python/actions/workflows/ci.yaml/badge.svg)](https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python/actions/workflows/ci.yaml)
-[![PyPI Package](https://img.shields.io/pypi/v/frequenz-pymdownx-superfences-filter-lines)](https://pypi.org/project/frequenz-pymdownx-superfences-filter-lines/)
-[![Docs](https://img.shields.io/badge/docs-latest-informational)](https://frequenz-floss.github.io/frequenz-pymdownx-superfences-filter-lines-python/)
+[![Build Status](https://github.com/frequenz-floss/pymdownx-superfence-filter-lines-python/actions/workflows/ci.yaml/badge.svg)](https://github.com/frequenz-floss/pymdownx-superfence-filter-lines-python/actions/workflows/ci.yaml)
+[![PyPI Package](https://img.shields.io/pypi/v/pymdownx-superfence-filter-lines)](https://pypi.org/project/pymdownx-superfence-filter-lines/)
+[![Docs](https://img.shields.io/badge/docs-latest-informational)](https://frequenz-floss.github.io/pymdownx-superfence-filter-lines-python/)
 
 ## Introduction
 
@@ -82,8 +82,8 @@ markdown_extensions:
       custom_fences:
         - name: "*"
           class: "highlight"
-          format: !!python/name:frequenz.pymdownx.superfences.filter_lines.do_format
-          validator: !!python/name:frequenz.pymdownx.superfences.filter_lines.do_validate
+          format: !!python/name:pymdownx_superfence_filter_lines.do_format
+          validator: !!python/name:pymdownx_superfence_filter_lines.do_validate
 ```
 
 ### Standalone
@@ -92,11 +92,11 @@ To use this superfence standalone, you can use something like this:
 
 ```python
 import markdown
-from frequenz.pymdownx.superfences.filter_lines import do_format, do_validate
+from pymdownx_superfence_filter_lines import do_format, do_validate
 
 html = markdown.markdown(
     markdown_source,
-    extensions=['pymdownx.superfences'],
+    extensions=['pymdownx.superfence'],
     extension_configs={
         "pymdownx.superfences": {
             "custom_fences": [

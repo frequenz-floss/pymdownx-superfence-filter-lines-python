@@ -6,8 +6,8 @@ site_name: "Frequenz Filter Lines Superfence"
 site_description: "A custom superfence for pymdown-extensions that can filters lines and plays nice with MkDocs"
 site_author: "Frequenz Energy-as-a-Service GmbH"
 copyright: "Copyright © 2023 Frequenz Energy-as-a-Service GmbH"
-repo_name: "frequenz-pymdownx-superfences-filter-lines-python"
-repo_url: "https://github.com/frequenz-floss/frequenz-pymdownx-superfences-filter-lines-python"
+repo_name: "pymdownx-superfence-filter-lines-python"
+repo_url: "https://github.com/frequenz-floss/pymdownx-superfence-filter-lines-python"
 edit_uri: "edit/v0.x.x/docs/"
 strict: true  # Treat warnings as errors
 
@@ -82,8 +82,8 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
         - name: "*"
           class: "highlight"
-          format: !!python/name:frequenz.pymdownx.superfences.filter_lines.do_format
-          validator: !!python/name:frequenz.pymdownx.superfences.filter_lines.do_validate
+          format: !!python/name:pymdownx_superfence_filter_lines.do_format
+          validator: !!python/name:pymdownx_superfence_filter_lines.do_validate
   - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true

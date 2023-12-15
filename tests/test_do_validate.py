@@ -10,7 +10,7 @@ from unittest import mock
 import markdown
 import pytest
 
-from frequenz.pymdownx.superfences.filter_lines import (
+from pymdownx_superfence_filter_lines import (
     Inputs,
     LinesRange,
     LinesRanges,
@@ -23,7 +23,7 @@ from frequenz.pymdownx.superfences.filter_lines import (
 def highlight_validator_mock() -> Iterator[mock.MagicMock]:
     """Mock `highlight_validator`."""
     with mock.patch(
-        "frequenz.pymdownx.superfences.filter_lines.highlight_validator",
+        "pymdownx_superfence_filter_lines.highlight_validator",
         autospec=True,
     ) as mock_highlight_validator:
         mock_highlight_validator.return_value = True
