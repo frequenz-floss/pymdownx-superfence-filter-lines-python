@@ -131,7 +131,7 @@ class LinesRanges:
 
         The string must be a comma-separated list of ranges, where each range is in the
         format described in
-        [`LinesRange.parse`][frequenz.pymdownx.superfences.filter_lines.LinesRange.parse].
+        [`LinesRange.parse`][pymdownx_superfence_filter_lines.LinesRange.parse].
 
         If no ranges are given, `None` is returned. If any ranges are invalid, they are
         ignored and a list of errors is returned.

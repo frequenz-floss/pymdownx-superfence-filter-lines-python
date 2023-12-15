@@ -7,7 +7,7 @@ import dataclasses
 
 import pytest
 
-from frequenz.pymdownx.superfences.filter_lines import LinesRange
+from pymdownx_superfence_filter_lines import LinesRange
 
 
 @dataclasses.dataclass(frozen=True, kw_only=True)
