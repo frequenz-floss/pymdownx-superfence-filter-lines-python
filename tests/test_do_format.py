@@ -8,6 +8,7 @@ from typing import Iterator
 from unittest import mock
 
 import pytest
+from pymdownx.superfences import SuperFencesBlockPreprocessor
 
 from frequenz.pymdownx.superfences.filter_lines import (
     LinesRange,
@@ -21,15 +22,16 @@ from frequenz.pymdownx.superfences.filter_lines import (
 def md_mock() -> Iterator[mock.MagicMock]:
     """Mock the `md` object."""
     md = mock.MagicMock()
-    preprocessor = mock.MagicMock()
-    preprocessor.highlight.side_effect = True
-    md.preprocessors.return_value = {"fenced_code_block": preprocessor}
+    preprocessor = mock.MagicMock(spec=SuperFencesBlockPreprocessor)
+    preprocessor.highlight.return_value = True
+    preprocessors = {"fenced_code_block": preprocessor}
+    md.preprocessors.__getitem__.side_effect = preprocessors.__getitem__
     yield md
 
 
 _SOURCE = """\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 4. we number them
 5. so we can see which ones are filtered
@@ -98,7 +100,7 @@ _cases = [
         options=Options(show_lines=LinesRanges({LinesRange(end=3)})),
         expected_src="""\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 """,
     ),
@@ -107,7 +109,7 @@ _cases = [
         title="Open range with start and end in the middle",
         options=Options(show_lines=LinesRanges({LinesRange(start=2, end=4)})),
         expected_src="""\
-2. which have multiple lines
+2. which has multiple lines
 3. and we want to filter some of them
 4. we number them
 """,
@@ -142,7 +144,7 @@ _cases = [
         ),
         expected_src="""\
 1. This is some text
-2. which have multiple lines
+2. which has multiple lines
 4. we number them
 5. so we can see which ones are filtered
 6. and which ones are not
