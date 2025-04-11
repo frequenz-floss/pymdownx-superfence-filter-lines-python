@@ -39,7 +39,7 @@ classifiers = [
   "Typing :: Typed",
 ]
 requires-python = ">= 3.11, < 4"
-dependencies = ["Markdown >= 3.5, < 4", "pymdown-extensions >= 10, < 11"]
+dependencies = ["Markdown >= 3.6, < 4", "pymdown-extensions >= 10, < 11"]
 dynamic = ["version"]
 
 [[project.authors]]
