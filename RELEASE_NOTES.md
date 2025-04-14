@@ -6,7 +6,7 @@
 
 ## Upgrading
 
-<!-- Here goes notes on how to upgrade from previous versions, including deprecations and what they should be replaced with -->
+- The `Markdown` minimum supported version was bumped to 3.6, you might need to bump your `Markdown` version if you are using an older version.
 
 ## New Features
 
