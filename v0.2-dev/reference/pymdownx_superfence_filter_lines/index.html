@@ -833,6 +833,7 @@
 
 
 
+
   <div class="doc doc-children">
 
 
@@ -859,6 +860,7 @@
 
 
         <p>Raw input options before they are validated.</p>
+
 
 
 
@@ -908,6 +910,7 @@
     <div class="doc doc-contents ">
 
         <p>Lines to show option.</p>
+
     </div>
 
 </div>
@@ -942,6 +945,7 @@
 
         <p>A range of lines.</p>
 <p><code>start</code> and <code>end</code> are inclusive and the indices start from 1.</p>
+
 
 
 
@@ -1173,6 +1177,7 @@
 
         <p>End line.</p>
 <p><code>None</code> means the end of the file.</p>
+
     </div>
 
 </div>
@@ -1198,6 +1203,7 @@
 
         <p>Start line.</p>
 <p><code>None</code> means the beginning of the file.</p>
+
     </div>
 
 </div>
@@ -1218,6 +1224,7 @@
     <div class="doc doc-contents ">
 
         <p>Whether the item is inside this range.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1261,6 +1268,7 @@
 
         <p>Validate inputs upon creation.</p>
 
+
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
               <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-34">34</a></span>
@@ -1302,6 +1310,7 @@
     <div class="doc doc-contents ">
 
         <p>Get the string representation.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1433,6 +1442,7 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
       </tbody>
     </table>
 
+
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
               <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-56"> 56</a></span>
@@ -1557,6 +1567,7 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
 
 
         <p>A set of line ranges.</p>
+
 
 
 
@@ -1690,12 +1701,18 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
   </span>
 
 <a href="#pymdownx_superfence_filter_lines.LinesRanges.ranges" class="headerlink" title="Permanent link">¤</a></h6>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ranges</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Set" href="https://docs.python.org/3/library/typing.html#typing.Set">Set</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="pymdownx_superfence_filter_lines.LinesRange" href="#pymdownx_superfence_filter_lines.LinesRange">LinesRange</a></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ranges</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.Set" href="https://docs.python.org/3/library/typing.html#typing.Set">Set</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="pymdownx_superfence_filter_lines.LinesRange
+
+
+  
+      dataclass
+  " href="#pymdownx_superfence_filter_lines.LinesRange">LinesRange</a></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>The lines ranges.</p>
+
     </div>
 
 </div>
@@ -1716,6 +1733,7 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
     <div class="doc doc-contents ">
 
         <p>Whether the item is inside any of the ranges.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1744,6 +1762,7 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
     <div class="doc doc-contents ">
 
         <p>Validate.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1774,6 +1793,7 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
     <div class="doc doc-contents ">
 
         <p>Get the string representation.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1808,7 +1828,12 @@ If <code>start</code> appears without <code>:</code>, it is assumed to be both <
         <p>Create from a string.</p>
 <p>The string must be a comma-separated list of ranges, where each range is in the
 format described in
-<a class="autorefs autorefs-internal" href="#pymdownx_superfence_filter_lines.LinesRange.parse"><code>LinesRange.parse</code></a>.</p>
+<a class="autorefs autorefs-internal" title="parse
+
+
+  
+      classmethod
+  " href="#pymdownx_superfence_filter_lines.LinesRange.parse"><code>LinesRange.parse</code></a>.</p>
 <p>If no ranges are given, <code>None</code> is returned. If any ranges are invalid, they are
 ignored and a list of errors is returned.</p>
 
@@ -1864,6 +1889,7 @@ if any.</p>
           </tr>
       </tbody>
     </table>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -1963,6 +1989,7 @@ if any.</p>
 
 
 
+
               <details class="quote">
                 <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
                 <div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-171">171</a></span>
@@ -2000,12 +2027,18 @@ if any.</p>
   </span>
 
 <a href="#pymdownx_superfence_filter_lines.Options.show_lines" class="headerlink" title="Permanent link">¤</a></h6>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">show_lines</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.NotRequired" href="https://docs.python.org/3/library/typing.html#typing.NotRequired">NotRequired</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="pymdownx_superfence_filter_lines.LinesRanges" href="#pymdownx_superfence_filter_lines.LinesRanges">LinesRanges</a></span><span class="p">]</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">show_lines</span><span class="p">:</span> <span class="n"><a class="autorefs autorefs-external" title="typing.NotRequired" href="https://docs.python.org/3/library/typing.html#typing.NotRequired">NotRequired</a></span><span class="p">[</span><span class="n"><a class="autorefs autorefs-internal" title="pymdownx_superfence_filter_lines.LinesRanges
+
+
+  
+      dataclass
+  " href="#pymdownx_superfence_filter_lines.LinesRanges">LinesRanges</a></span><span class="p">]</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
         <p>Lines to show.</p>
+
     </div>
 
 </div>
@@ -2042,6 +2075,7 @@ if any.</p>
     <div class="doc doc-contents ">
 
         <p>Filter the lines and run the default highlighter.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
@@ -2126,6 +2160,7 @@ if any.</p>
     <div class="doc doc-contents ">
 
         <p>Validate the inputs.</p>
+
 
             <details class="quote">
               <summary>Source code in <code>pymdownx_superfence_filter_lines/__init__.py</code></summary>
