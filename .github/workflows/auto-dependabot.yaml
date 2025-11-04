@@ -9,7 +9,7 @@ jobs:
     if: github.actor == 'dependabot[bot]'
     steps:
       - name: Auto-approve and merge Dependabot PRs
-        uses: frequenz-floss/dependabot-auto-approve@005e52004f5d5c6af2f81b89ec25e5cf6f3dfd77 # v1.3.0
+        uses: frequenz-floss/dependabot-auto-approve@3cad5f42e79296505473325ac6636be897c8b8a1 # v1.3.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           merge-method: merge
