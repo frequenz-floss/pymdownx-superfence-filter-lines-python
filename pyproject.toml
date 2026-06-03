@@ -70,7 +70,7 @@ dev-mkdocs = [
 ]
 dev-mypy = [
   "mypy == 2.1.0",
-  "types-Markdown == 3.10.2.20260408",
+  "types-Markdown == 3.10.2.20260518",
   # For checking the noxfile, docs/ script, and tests
   "pymdownx-superfence-filter-lines[dev-mkdocs,dev-noxfile,dev-pytest]",
 ]
