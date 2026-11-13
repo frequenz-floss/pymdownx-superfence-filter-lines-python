@@ -2,16 +2,10 @@
 
 ## Summary
 
-<!-- Here goes a general summary of what this release is about -->
+This is the first stable release. The extension has been used in production for a long time without needing changes, so its API is now considered stable. From now on, breaking changes will only happen in a new major version, following [semantic versioning](https://semver.org/).
+
+This release also adds support for `pymdown-extensions` 11, 12 and 13. The extension's code hasn't changed since v0.1.0.
 
 ## Upgrading
 
-- The `Markdown` minimum supported version was bumped to 3.6, you might need to bump your `Markdown` version if you are using an older version.
-
-## New Features
-
-<!-- Here goes the main new features and examples or instructions on how to use them -->
-
-## Bug Fixes
-
-<!-- Here goes notable bug fixes that are worth a special mention or explanation -->
+- The minimum supported `Markdown` version is now 3.6. Upgrade `Markdown` to 3.6 or later if your project uses an older version.
